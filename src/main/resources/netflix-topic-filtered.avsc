@@ -1,0 +1,40 @@
+{
+  "type": "record",
+  "name": "UserAction",
+  "namespace": "com.example.avro",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "string",
+      "doc": "The ID of the user performing the action"
+    },
+    {
+      "name": "movie_id",
+      "type": "string",
+      "doc": "The ID of the movie associated with the action"
+    },
+    {
+      "name": "action",
+      "type": "string",
+      "doc": "The action performed by the user (e.g., 'resume', 'pause')"
+    },
+    {
+      "name": "playback_position",
+      "type": "int",
+      "doc": "The playback position in milliseconds"
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-micros"
+      },
+      "doc": "The timestamp of the action in ISO 8601 format"
+    },
+    {
+      "name": "device",
+      "type": "string",
+      "doc": "The device used to perform the action (e.g., 'mobile', 'desktop')"
+    }
+  ]
+}

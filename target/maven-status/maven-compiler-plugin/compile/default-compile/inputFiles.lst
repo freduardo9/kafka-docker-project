@@ -1,0 +1,13 @@
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\consumer\config\PubSubConfiguration.java
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\consumer\config\MessageConfiguration.java
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\consumer\enums\AutoOffsetReset.java
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\consumer\ConsumerApp.java
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\consumer\processor\AvroProcessor.java
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\consumer\processor\CsvProcessor.java
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\consumer\enums\GroupProtocol.java
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\consumer\config\KafkaConfiguration.java
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\consumer\enums\SecurityProtocol.java
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\consumer\enums\FileFormat.java
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\producer\ProducerApp.java
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\consumer\processor\MessageProcessor.java
+C:\Users\Freddy Rodriguez\Documents\GitHub\kafka-docker-project\src\main\java\com\example\consumer\processor\JsonProcessor.java

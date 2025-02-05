@@ -1,0 +1,5 @@
+spring:
+    config:
+        import: "file:${config}" # Load external YAML file passed via --config
+server:
+    port: 9090

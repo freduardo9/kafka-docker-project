@@ -1,0 +1,51 @@
+{{- range $index, $publisher := .Values.publishers }}
+{{- if eq $publisher.method "kafka-to-pubsub" }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-to-pubsub-{{ $publisher.name }}
+  namespace: {{ $.Values.namespace }}
+  labels:
+    app: kafka-to-pubsub-{{ $publisher.name }}
+spec:
+  replicas: {{ $publisher.partitions }}
+  selector:
+    matchLabels:
+      app: kafka-to-pubsub-{{ $publisher.name }}
+  template:
+    metadata:
+      labels:
+        app: kafka-to-pubsub-{{ $publisher.name }}
+    spec:
+      imagePullSecrets:
+        - name: docker-reg-cred
+      containers:
+      - name: kafka-to-pubsub-{{ $publisher.name }}
+        image: {{ $publisher.image.repository }}
+        imagePullPolicy: Always
+        env:
+          - name: GOOGLE_APPLICATION_CREDENTIALS
+            value: {{ $.Values.gcp.credFileName }}
+          - name: CONFIG_LOCATION
+            value: config.yaml
+        volumeMounts:
+          - name: gcp-credentials
+            mountPath: /etc/secrets/gcp
+            readOnly: true
+          - name: config-volume
+            mountPath: /etc/config
+            readOnly: true
+          - name: tmp
+            mountPath: /tmp
+      volumes:
+        - name: gcp-credentials
+          secret:
+            secretName: {{ $publisher.kafka.ssl.certsSecretName }}
+        - name: tmp
+          emptyDir: { }
+        - name: config-volume
+          configMap:
+            name: {{ .name }}-cm
+{{- end }}
+{{- end }}

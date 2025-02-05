@@ -1,0 +1,13 @@
+# Java
+*.class
+*.jar
+/out/
+.idea/
+
+# Docker
+docker/data/
+docker/logs/
+
+# OS
+.DS_Store
+Thumbs.db

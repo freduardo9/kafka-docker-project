@@ -1,0 +1,14 @@
+com\example\consumer\config\KafkaConfiguration.class
+com\example\consumer\processor\CsvProcessor$1.class
+com\example\consumer\ConsumerApp.class
+com\example\consumer\enums\FileFormat.class
+com\example\producer\ProducerApp.class
+com\example\consumer\enums\AutoOffsetReset.class
+com\example\consumer\enums\SecurityProtocol.class
+com\example\consumer\config\MessageConfiguration.class
+com\example\consumer\processor\AvroProcessor.class
+com\example\consumer\enums\GroupProtocol.class
+com\example\consumer\processor\CsvProcessor.class
+com\example\consumer\processor\JsonProcessor.class
+com\example\consumer\processor\MessageProcessor.class
+com\example\consumer\config\PubSubConfiguration.class

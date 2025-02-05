@@ -1,0 +1,14 @@
+kafka:
+  broker: "localhost:9092"
+  topic: "netflix-csv-topic1"
+  group: "my-group"
+message:
+  file_format: CSV
+  separator_char: ','
+  quote_char: '"'
+  escape_char: "\\"
+  schema_file_location: "src/main/resources/actual.avsc"
+pubsub:
+  project_id: "xxx"
+  topic_id: "xx"
+  endpoint: "xx"

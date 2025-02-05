@@ -1,0 +1,49 @@
+{
+  "type": "record",
+  "name": "raw",
+  "namespace": "raw_rtt",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "avro.java.string": "String"
+        }
+      ],
+      "doc": "The ID of the user performing the action"
+    },
+    {
+      "name": "movie_id",
+      "type": "string",
+      "doc": "The ID of the movie associated with the action"
+    },
+    {
+      "name": "action",
+      "type": "string",
+      "doc": "The action performed by the user (e.g., 'resume', 'pause')"
+    },
+    {
+      "name": "playback_position",
+      "type": [
+        "null",
+        "long"
+      ],
+      "doc": "The playback position in milliseconds"
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-micros"
+      },
+      "doc": "The timestamp of the action in ISO 8601 format"
+    },
+    {
+      "name": "device",
+      "type": "string",
+      "doc": "The device used to perform the action (e.g., 'mobile', 'desktop')"
+    }
+  ]
+}
